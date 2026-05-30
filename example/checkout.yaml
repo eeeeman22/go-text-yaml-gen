@@ -1,0 +1,9 @@
+cancel:
+  en: "Cancel"
+  es: "Cancelar"
+  fr: "Annuler"
+
+confirm_purchase:
+  en: "Confirm purchase"
+  es: "Confirmar compra"
+  fr: "Confirmer l'achat"

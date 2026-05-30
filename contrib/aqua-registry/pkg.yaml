@@ -1,0 +1,6 @@
+# Submit this file to aquaproj/aqua-registry as:
+#   pkgs/<owner>/go-text-yaml-gen/pkg.yaml
+#
+# Add a new entry here for each release to allow aqua to test it.
+packages:
+  - name: eeeeman22/go-text-yaml-gen@v0.1.0

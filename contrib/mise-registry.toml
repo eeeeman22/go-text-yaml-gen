@@ -1,0 +1,9 @@
+# Submit this file to jdx/mise as:
+#   registry/go-text-yaml-gen.toml
+#
+# Once the aqua-registry PR is merged, prefer the aqua: backend (tier 1).
+# Until then, the github: backend works immediately after your first release.
+#
+backends = ["aqua:eeeeman22/go-text-yaml-gen", "github:eeeeman22/go-text-yaml-gen"]
+description = "Deterministic YAML-based localization codegen for golang.org/x/text/message"
+test = { cmd = "go-text-yaml-gen --help" }

@@ -1,0 +1,23 @@
+[tools]
+go = "1.25.3"
+
+[tasks.build]
+description = "Build the go-text-yaml-gen binary into ./bin/"
+run = "go build -o ./bin/go-text-yaml-gen ."
+
+[tasks.generate]
+description = "Regenerate testdata/golden from example/ (update fixtures)"
+run = "go run . -o ./testdata/golden ./example"
+
+
+# ── Consumer project example ──────────────────────────────────────────────────
+# In another project's .mise.toml:
+#
+# [tools]
+# # pre-built binary from GitHub releases (no Go required):
+# "github:eeeeman22/go-text-yaml-gen" = "v1.0.0"
+# # or via go install (requires Go):
+# "go:github.com/eeeeman22/go-text-yaml-gen" = "v1.0.0"
+#
+# [tasks.generate]
+# run = "go-text-yaml-gen -o ./internal/locales ./translations"

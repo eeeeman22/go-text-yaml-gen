@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/aquaproj/aqua/main/json-schema/registry.json
+#
+# Submit this file to aquaproj/aqua-registry as:
+#   pkgs/<owner>/go-text-yaml-gen/registry.yaml
+#
+packages:
+  - type: github_release
+    repo_owner: eeeeman22
+    repo_name: go-text-yaml-gen
+    description: Deterministic YAML-based localization codegen for golang.org/x/text/message
+    asset: go-text-yaml-gen_{{.OS}}_{{.Arch}}.{{.Format}}
+    format: tar.gz
+    checksum:
+      type: github_release
+      asset: checksums.txt
+      algorithm: sha256
+    overrides:
+      - goos: windows
+        format: zip
